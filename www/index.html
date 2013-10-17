@@ -21,32 +21,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-       <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
     <body>
-       <div id="allRepos"> 
-	   var xhr = new XMLHttpRequest();
- xhr.open('GET', 'https://api.github.com/legacy/repos/search/javascript', true);
-  // Response handlers.
-  xhr.onload = function () {
-     var repos = JSON.parse(xhr.response), i, reposHTML = "";
-     for (i = 0; i < repos.repositories.length; i++) {
-       reposHTML += "<p><a href='https://github.com/" + repos.repositories[i].username + "/" + repos.repositories[i].name + "'>" + repos.repositories[i].name + "</a><br>" + repos.repositories[i].description + "</p>";
-     }
-     document.getElementById("allRepos").innerHTML = reposHTML;
-  };
-
-  xhr.onerror = function () {
-     alert('error making the request.');
-  };
-
-xhr.send();
-
-	   </div>
-	   
-	   
+	<div id="allRepos">
+	
+	</div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
